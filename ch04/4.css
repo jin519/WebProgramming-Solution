@@ -1,0 +1,42 @@
+body {
+    background-color: aliceblue;
+}
+
+h1 {
+    color: brown;
+    text-align: center;
+}
+
+h3 {
+    color: blue;
+    text-shadow: 2px 2px 5px skyblue;
+}
+
+hr {
+    border: 1px solid;
+}
+
+@font-face {
+    font-family: NanumPen;
+    src: url("resource/NanumPen.ttf");
+}
+
+p,
+small {
+    font-family: NanumPen, serif;
+    font-size: 1.2em;
+    text-indent: 1em;
+}
+
+ul {
+    border: 1px dotted;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    background-color: orange;
+    border-radius: 10px;
+}

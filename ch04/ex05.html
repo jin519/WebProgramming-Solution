@@ -1,0 +1,53 @@
+<!-- 206p 실습문제 5번 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>셀렉터</title>
+    <style>
+        body {
+            background-color: skyblue;
+        }
+
+        h3 {
+            color: green;
+        }
+
+        div#center {
+            background-color: yellow;
+            color: blue;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        p {
+            text-indent: 5em;
+        }
+
+        p>em {
+            color: green;
+        }
+
+        p>strong {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>얼굴</h3>
+    <hr>
+    <div id="center"><strong>박인희</strong></div>
+    <div class="indent">
+        <p>
+            <em>길</em>을 걷고 산들 무엇하리
+            <strong>꽃</strong>이 내가 아니듯 내가
+            <strong>꽃</strong>이 될 수 없는 지금...
+        </p>
+    </div>
+</body>
+
+</html>

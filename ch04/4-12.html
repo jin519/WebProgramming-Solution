@@ -1,0 +1,50 @@
+<!-- 181p 예제 4-12 CSS3 폰트 활용 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>폰트</title>
+    <style>
+        h3 {
+            font: italic bold 40px consolas, sans-serif;
+        }
+
+        p {
+            font: large, "Times New Roman", Serif;
+        }
+
+        #font1 {
+            font-weight: 900;
+        }
+
+        #font2 {
+            font-weight: 100;
+        }
+
+        #font3 {
+            font-style: italic;
+        }
+
+        #font4 {
+            font-style: oblique;
+        }
+
+        p>span {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Consolas font</h3>
+    <hr>
+    <p id="font1">font-weight 900</p>
+    <p id="font2">font-weight 100</p>
+    <p id="font3">italic style</p>
+    <p id="font4">oblique style</p>
+    <p>현재 크기의 <span>1.5배</span> 크기로</p>
+</body>
+
+</html>

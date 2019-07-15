@@ -1,0 +1,41 @@
+<!-- 197p 예제 4-20 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>div 박스에 그림자 만들기</title>
+    <style>
+        div {
+            width: 150px;
+            height: 70px;
+            border: 10px solid lightgray;
+            background-image: url("resource/spongebob.png");
+            background-size: 150px 100px;
+            background-repeat: no-repeat;
+        }
+
+        .box1 {
+            box-shadow: 10px 10px red;
+        }
+
+        .box2 {
+            box-shadow: 10px 10px 5px skyblue;
+        }
+
+        .box3 {
+            box-shadow: 2px 2px 2px black, 0px 0px 20px darkblue, 0px 0px 5px skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>박스에 그림자 만들기</h3>
+    <hr>
+    <div class="box1">뚱이와 함께</div><br>
+    <div class="box2">뚱이와 함께</div><br>
+    <div class="box3">뚱이와 함께</div><br>
+</body>
+
+</html>
