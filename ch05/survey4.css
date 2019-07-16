@@ -1,0 +1,28 @@
+body {
+    margin: 0px;
+}
+
+header {
+    background-color: yellow;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0px;
+}
+
+form {
+    background-color: pink;
+    margin: 0px;
+}
+
+.comment {
+    vertical-align: bottom;
+    text-align: center;
+}
+
+footer {
+    background-color: violet;
+    margin: 0px;
+    padding: 20px;
+}

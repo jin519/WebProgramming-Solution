@@ -1,0 +1,52 @@
+<!-- 252p 실습문제 3번 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>오디오 재생 리스트</title>
+    <style>
+        #audioPlayListTable .number {
+            width: fit-content;
+            border: 2px dotted green;
+        }
+
+        #audioPlayListTable .songName {
+            font-weight: bold;
+            border-bottom: 1px solid gray;
+            width: 300px;
+        }
+
+        #audioPlayListTable button:hover {
+            color: magenta;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>오디오 재생 리스트</h3>
+    <hr>
+    <table id="audioPlayListTable">
+        <tr>
+            <td class="number">1</td>
+            <td class="songName">애국가</td>
+            <td><button type="button">재생</button></td>
+            <td><button type="button">중지</button></td>
+        </tr>
+        <tr>
+            <td class="number">2</td>
+            <td class="songName">Moon Glow</td>
+            <td><button type="button">재생</button></td>
+            <td><button type="button">중지</button></td>
+        </tr>
+        <tr>
+            <td class="number">3</td>
+            <td class="songName">Embraceable You</td>
+            <td><button type="button">재생</button></td>
+            <td><button type="button">중지</button></td>
+        </tr>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!-- 253p 실습문제 6-1번 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>어지러워요</title>
+    <style>
+        @keyframes rotateAnim {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        #spongebobImg {
+            animation-name: rotateAnim;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>어지러워요</h3>
+    <hr>
+    <img id="spongebobImg" src="resource/spongebob.png" alt="스폰지밥" width="200px" height="200px">
+</body>
+
+</html>

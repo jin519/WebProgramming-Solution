@@ -1,0 +1,64 @@
+<!-- 245p 예제 5-14 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>다양한 변환 사례</title>
+    <style>
+        div {
+            display: inline-block;
+            background-color: green;
+            padding: 5px;
+            width: 200px;
+        }
+
+        div#rotateBlk {
+            transform: rotate(20deg);
+        }
+
+        div#skewBlk {
+            transform: skew(0deg, -20deg);
+        }
+
+        div#scaleBlk {
+            transform: scale(3, 1);
+        }
+
+        div#translateYBlk {
+            transform: translateY(100px);
+        }
+
+        div#rotateBlk:hover {
+            transform: rotate(80deg);
+        }
+
+        div#skewBlk:hover {
+            transform: skew(0deg, -60deg);
+        }
+
+        div#scaleBlk:hover {
+            transform: scale(4, 2);
+        }
+
+        div#translateYBlk:hover {
+            transform: translate(50px, 100px);
+        }
+    </style>
+</head>
+
+<body>
+    <h3>다양한 Transform</h3>
+    <p>
+        아래는 회전(rotate), 기울임(skew), 이동(translate), 확대/축소(scale)가 적용된 사례이다.
+        또한 마우스를 올리면 추가적 변환이 일어난다.
+    </p>
+    <hr>
+    <div id="rotateBlk">rotate(20deg)</div>
+    <div id="skewBlk">skew(0, -20deg)</div>
+    <div id="translateYBlk">translateY(100px)</div>
+    <div id="scaleBlk">scale(3, 1)</div>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!-- 217p 예제 5-2 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>relative 배치</title>
+    <style>
+        div {
+            display: inline-block;
+            width: 50px;
+            line-height: 50px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid gray;
+        }
+
+        .downBlk:hover {
+            background-color: green;
+            position: relative;
+            left: 20px;
+            top: 20px;
+        }
+
+        .upBlk:hover {
+            background-color: green;
+            position: relative;
+            right: 20px;
+            bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>상대 배치, relative</h3>
+    <hr>
+    <div>T</div>
+    <div class="downBlk">h</div>
+    <div>a</div>
+    <div>n</div>
+    <div class="upBlk">k</div>
+    <div>s</div>
+</body>
+
+</html>

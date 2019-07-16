@@ -1,0 +1,51 @@
+body {
+    margin: 0px;
+}
+
+header {
+    background-color: yellow;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    margin: 0px;
+    text-align: center;
+}
+
+header p {
+    margin: 0px 20px 0px 0px;
+}
+
+#content {
+    background-color: orange;
+    padding: 20px 0px;
+    float: left;
+    width: 150px;
+    height: 800px;
+}
+
+#content h3 {
+    margin: 0px;
+}
+
+section {
+    background-color: skyblue;
+    padding: 20px 0px;
+    height: 800px;
+}
+
+section h3 {
+    margin: 0px;
+}
+
+footer {
+    background-color: violet;
+    padding: 20px 0px;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+footer p {
+    margin: 0px;
+}

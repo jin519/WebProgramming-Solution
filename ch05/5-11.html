@@ -1,0 +1,47 @@
+<!-- 238p 예제 5-11 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>폼 스타일 추가</title>
+    <style>
+        label {
+            display: block;
+            padding: 10px;
+        }
+
+        label span {
+            float: left;
+            width: 90px;
+            text-align: right;
+            padding: 10px;
+        }
+
+        input[type=text] {
+            color: red;
+        }
+
+        input:focus {
+            font-size: 120%;
+        }
+
+        input:hover {
+            background: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>CONTACT US</h3>
+    <hr>
+    <form>
+        <label><span>Name</span><input type="text" placeholder="Elvis"></label>
+        <label><span>Email</span><input type="email" placeholder="id@host"></label>
+        <label><span>Comment</span><textarea placeholder="메시지를 남겨주세요"></textarea></label>
+        <label><span></span><button type="submit">submit</button></label>
+    </form>
+</body>
+
+</html>

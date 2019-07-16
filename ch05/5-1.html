@@ -1,0 +1,48 @@
+<!-- 214p 예제 5-1 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>display 프로퍼티</title>
+    <style>
+        div {
+            background-color: aliceblue;
+            border-color: lightgreen;
+            border-style: solid;
+            color: blue;
+        }
+
+        div.none {
+            display: none;
+        }
+
+        div.inline {
+            display: inline;
+        }
+
+        div.inlineBlk {
+            display: inline-block;
+            height: 50px;
+        }
+
+        span.blk {
+            display: block;
+            border-color: red;
+            border-style: dotted;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>인라인, 인라인 블록, 블록</h3>
+    <hr>
+    나는 <div class="none">div(none)</div>입니다.<br><br>
+    나는 <div class="inline">div(inline)</div>입니다.<br><br>
+    나는 <div class="inlineBlk">div(inline-block)</div>입니다.<br><br>
+    나는 <div>div<span class="blk">span(block)</span>입니다.</div><br>
+</body>
+
+</html>
