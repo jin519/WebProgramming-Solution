@@ -7,3 +7,4 @@
 [chapter 3 - HTML5 문서 구조화와 웹 폼]<br>
 [chapter 4 - CSS3로 웹 페이지 꾸미기]<br>
 [chapter 5 - CSS3 고급 활용]<br>
+[chapter 6 - 자바스크립트 언어]<br>
