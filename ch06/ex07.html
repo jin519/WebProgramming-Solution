@@ -1,0 +1,37 @@
+<!-- 304p 실습문제 7번 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>큰 자리수와 낮은 자리수 같은지 비교</title>
+</head>
+
+<body>
+    <h3>큰 자리수와 낮은 자리수 같은지 비교</h3>
+    <hr>
+    <script>
+        var num = prompt("숫자 입력");
+        num = parseInt(num);
+
+        if (isNaN(num))
+            document.write("잘못된 입력 값입니다.<br>");
+        else {
+            var smallest = (num % 10);
+
+            var tmp = num;
+            while (tmp > 10) {
+                tmp /= 10;
+            }
+            var biggest = Math.floor(tmp);
+           
+            if (smallest == biggest)
+                document.write(num + ": 같음");
+            else
+                document.write(num + ": 다름");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!-- 290p 예제 6-21 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>continue 문</title>
+</head>
+
+<body>
+    <h3>3으로 나눈 나머지가 1인 수만 더하기</h3>
+    <hr>
+    <script>
+        var sum = 0;
+
+        for (var i = 1; i <= 10; ++i) {
+            if ((i % 3) != 1)
+                continue;
+
+            document.write(i + " ");
+            sum += i;
+        }
+
+        document.write("합은 " + sum + "<br>");
+    </script>
+</body>
+
+</html>

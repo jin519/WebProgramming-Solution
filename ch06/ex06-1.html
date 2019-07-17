@@ -1,0 +1,26 @@
+<!-- 304p 실습문제 6-1번 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>1</title>
+    <script>
+        function big(operand1, operand2) {
+            operand1 = parseInt(operand1);
+            operand2 = parseInt(operand2);
+
+            return ((operand1 > operand2) ? operand1 : operand2);
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+        var b = big("625", "555");
+        document.write("큰수=" + b);
+    </script>
+</body>
+
+</html>

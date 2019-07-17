@@ -1,0 +1,25 @@
+<!-- 295p 예제 6-23 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트 전역함수</title>
+</head>
+
+<body>
+    <h3>eval(), parseInt(), inNAN()</h3>
+    <hr>
+    <script>
+        document.write("eval(2*3+4*6)는 " + eval(2 * 3 + 4 * 6) + "<br>");
+        document.write('parseInt(\"32\")는 ' + parseInt("32") + "<br>");
+        document.write("parseInt(\"0x32\")는 " + parseInt("0x32") + "<br><br>");
+
+        var str = "hello";
+        if (isNaN(str))
+            document.write(str + "는 숫자가 아닙니다.")
+    </script>
+</body>
+
+</html>

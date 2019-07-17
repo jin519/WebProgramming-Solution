@@ -1,0 +1,33 @@
+<!-- 298p Open Challenge 06 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>별 문자 출력하기</title>
+</head>
+
+<body>
+    <h3>별 문자 출력하기</h3>
+    <hr>
+    <script>
+        function prtStars(n) {
+            for (var i = 1; i <= n; ++i) {
+                for (var j = 1; j <= i; ++j)
+                    document.write("*");
+                document.write("<br>");
+            }
+        }
+
+        var n = prompt("정수를 입력하세요", 0);
+        n = parseInt(n);
+
+        if (isNaN(n))
+            document.write("입력 오류 입니다.<br>");
+        else
+            prtStars(n);
+    </script>
+</body>
+
+</html>

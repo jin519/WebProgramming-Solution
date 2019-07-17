@@ -1,0 +1,26 @@
+<!-- 303p 실습문제 3-1번 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>별 찍기</title>
+</head>
+
+<body>
+    <script>
+        function prtStars(n) {
+            for (var i = 1; i <= n; ++i) {
+                for (var j = 1; j <= i; ++j) {
+                    document.write("*");
+                }
+                document.write("<br>");
+            }
+        }
+
+        prtStars(5);
+    </script>
+</body>
+
+</html>

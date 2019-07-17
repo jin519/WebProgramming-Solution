@@ -1,0 +1,26 @@
+<!-- 286p 예제 6-17 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>for 문</title>
+</head>
+
+<body>
+    <h3>for 문으로 10px~35px 크기 출력</h3>
+    <hr>
+    <script>
+        for (var i = 10; i <= 35; i += 5) {
+            document.write("<span ");
+            document.write("style='font-size:" + i + "px'>");
+            document.write(i + "px");
+            document.write("</span>");
+        }
+    </script>
+</body>
+
+</html>

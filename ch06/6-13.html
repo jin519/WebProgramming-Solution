@@ -1,0 +1,46 @@
+<!-- 278p 예제 6-13 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>비트 연산</title>
+</head>
+
+<body>
+    <h3>비트 논리 연산과 시프트 연산</h3>
+    <hr>
+    <script>
+        function binarize(num) {
+            var retVal = "";
+
+            for (i = 0; i < 8; ++i, num <<= 1) {
+                if ((num & 0x80))
+                    retVal += "1";
+                else
+                    retVal += "0";
+            }
+
+            return retVal;
+        }
+
+        var x = 10;
+        var y = 3;
+
+        document.write("x = " + x + ", y = " + y + "<br>");
+        document.write("x : " + binarize(x) + "<br>");
+        document.write("y : " + binarize(y) + "<br>");
+        document.write("<hr>");
+        document.write("x & y : " + binarize(x & y) + "<br>");
+        document.write("x | y : " + binarize(x | y) + "<br>");
+        document.write("x ^ y : " + binarize(x ^ y) + "<br>");
+        document.write("~x : " + binarize(~x) + "<br>");
+        document.write("<hr>");
+        document.write("x << 1 : " + binarize(x << 1) + "(" + (x << 1) + ")" + "<br>");
+        document.write("x >> 1 : " + binarize(x >> 1) + "(" + (x >> 1) + ")" + "<br>");
+        document.write("x >>> 1 : " + binarize(x >>> 1) + "(" + (x >>> 1) + ")" + "<br>");
+    </script>
+</body>
+
+</html>

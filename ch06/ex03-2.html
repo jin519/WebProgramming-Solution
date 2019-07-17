@@ -1,0 +1,29 @@
+<!-- 303p 실습문제 3-2 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>document.write()로 표만들기</title>
+</head>
+
+<body>
+    <h3>document.write()로 표만들기</h3>
+    <hr>
+    <script>
+        document.write("<table border='double'><tr><th>n</th>");
+
+        for (var i = 0; i <= 9; ++i)
+            document.write("<td>" + i + "</td>");
+
+        document.write("</tr><tr><th>n&#xb2;</th>");
+
+        for (var i = 0; i <= 9; ++i)
+            document.write("<td>" + (i * i) + "</td>");
+
+        document.write("</tr></table>");
+    </script>
+</body>
+
+</html>

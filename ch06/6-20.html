@@ -1,0 +1,28 @@
+<!-- 289p 예제 6-20 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>break 문</title>
+</head>
+
+<body>
+    <h3>1에서 얼마까지 더해야 3000을 넘는가?</h3>
+    <hr>
+    <script>
+        var sum = 1;
+
+        for (var i = 2;; ++i) {
+            sum += i;
+
+            if (sum > 3000) {
+                document.write(i + "까지 더하면 3000을 넘음 : " + sum + "<br>");
+                break;
+            }
+        }
+    </script>
+</body>
+
+</html>
