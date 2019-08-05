@@ -1,0 +1,29 @@
+<!-- 314p 예제 7-2 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>[]로 배열 만들기</title>
+</head>
+
+<body>
+    <h3>[]로 배열 만들기</h3>
+    <hr>
+    <script>
+        function prtStars(num) {
+            for (var i = 0; i < num; ++i)
+                document.write("*");
+            document.write(num + "<br>");
+        }
+
+        var plots = [20, 5, 8, 15, 20];
+        document.write("var plots = [20, 5, 8, 15, 20]<br>");
+
+        for (var i = 0; i < plots.length; ++i)
+            prtStars(plots[i]);
+    </script>
+</body>
+
+</html>

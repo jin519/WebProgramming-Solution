@@ -1,0 +1,60 @@
+<!-- 332p 예제 7-10 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>리터럴 표기법으로 객체 만들기</title>
+</head>
+
+<body>
+    <h3>리터럴 표기법으로 객체 만들기</h3>
+    <hr>
+    <script>
+        var account = {
+            // 계좌 주인
+            owner: "원진",
+
+            // 계좌 코드
+            code: "1111",
+
+            // 잔액
+            balance: 35000,
+
+            // 잔금을 조회한다.
+            inquiry: function () {
+                return this.balance;
+            },
+
+            // 저금한다.
+            // param money: 저금하고자 하는 액수
+            deposit: function (money) {
+                this.balance += money;
+            },
+
+            // 인출한다.
+            // param money: 인출하고자 하는 액수
+            withdraw: function (money) {
+                this.balance -= money;
+                return money;
+            }
+        }
+
+        // 웹 페이지에 문자열을 출력하고 개행한다.
+        // param str: 입력 문자열
+        function printString(str) {
+            document.write(str + "<br>");
+        }
+
+        printString("account: " + account.owner + ", " + account.code + ", " + account.balance);
+
+        account.deposit(10000);
+        printString("10000원 저금 후 잔액은 " + account.inquiry());
+
+        account.withdraw(5000);
+        printString("5000원 인출 후 잔액은 " + account.inquiry());
+    </script>
+</body>
+
+</html>

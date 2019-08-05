@@ -1,0 +1,29 @@
+<!-- 338p 실습문제 4번 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>일요일은 pink, 다른 요일은 gold 배경</title>
+</head>
+
+<body>
+    <h3>일요일은 pink, 다른 요일은 gold 배경</h3>
+    <hr>
+    <script>
+        var current = new Date();
+        var currentDay = current.getDay();
+        var dayList = new Array("일", "월", "화", "수", "목", "금", "토");
+
+        // 일요일
+        if (currentDay == 0)
+            document.body.style.backgroundColor = "pink";
+        else
+            document.body.style.backgroundColor = "gold";
+
+        document.write("오늘: " + current.getDate() + "일, " + dayList[currentDay] + "요일");
+    </script>
+</body>
+
+</html>

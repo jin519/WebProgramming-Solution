@@ -1,0 +1,37 @@
+<!-- 320p 예제 7-5 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Date 객체로 현재 시간 알아내기</title>
+</head>
+
+<body>
+    <h3>Date 객체로 현재 시간 알아내기</h3>
+    <hr>
+    <script>
+        function prtDocument(str) {
+            document.write(str + "<br>");
+        }
+
+        var now = new Date();
+        prtDocument("현재 시간: " + now.toUTCString());
+        document.write("<hr>");
+
+        prtDocument(now.getFullYear() + "년도");
+        prtDocument(now.getMonth() + "월");
+        prtDocument(now.getDate() + "일");
+        prtDocument(now.getHours() + "시");
+        prtDocument(now.getMinutes() + "분");
+        prtDocument(now.getSeconds() + "초");
+        prtDocument(now.getMilliseconds() + "밀리초");
+        document.write("<hr>");
+
+        var next = new Date(2017, 7, 15, 12, 12, 12);
+        prtDocument("next.toLocaleString(): " + next.toLocaleString());
+    </script>
+</body>
+
+</html>

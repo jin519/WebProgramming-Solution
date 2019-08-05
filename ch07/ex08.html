@@ -1,0 +1,47 @@
+<!-- 340p 실습문제 8번 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>16개의 랜덤한 색 만들기</title>
+    <style>
+        div {
+            display: inline-block;
+            width: 150px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>16개의 랜덤한 색 만들기</h3>
+    <hr>
+    <script>
+        // 경계를 포함하는 범위 내의 숫자를 랜덤으로 생성한다.
+        // param start: 범위 시작
+        // param end: 범위 끝
+        function generateRandomNumber(start, end) {
+            return (Math.floor(Math.random() * (end - start)) + start);
+        }
+
+        function printRandomColorBox(colorId) {
+            var red = generateRandomNumber(0, 255);
+            var green = generateRandomNumber(0, 255);
+            var blue = generateRandomNumber(0, 255);
+            var colorName = "rgb(" + red + "," + green + "," + blue + ")";
+
+            document.write("<div id=" + colorId + ">" + colorName + "</div>");
+            document.getElementById(colorId).style.backgroundColor = colorName;
+        }
+
+        for (var i = 0; i < 17; ++i) {
+            if (i % 4 == 0)
+                document.write("<br>");
+            printRandomColorBox("id" + i);
+        }
+    </script>
+</body>
+
+</html>

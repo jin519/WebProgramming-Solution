@@ -1,0 +1,41 @@
+<!-- 340p 실습문제 7번 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>17개의 CSS2 색 이름과 색</title>
+    <style>
+        div {
+            display: inline-block;
+            width: 60px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>17개의 CSS2 색 이름과 색</h3>
+    <hr>
+    <script>
+        function printColorBox(colorName) {
+            document.write("<div id=" + colorName + ">" + colorName + "</div>");
+            document.getElementById(colorName).style.backgroundColor = colorName;
+        }
+
+        var colorNames = [
+            "maroon", "red", "orange", "yellow", "olive",
+            "purple", "fuchsia", "white", "lime", "green",
+            "navy", "blue", "aqua", "teal", "black", "silver", "gray"
+        ];
+
+        for (var i = 0; i < colorNames.length; ++i) {
+            if (i % 6 == 0)
+                document.write("<br>");
+            printColorBox(colorNames[i]);
+        }
+    </script>
+</body>
+
+</html>

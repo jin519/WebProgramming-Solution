@@ -1,0 +1,51 @@
+<!-- 326p 예제 7-7 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>String 객체의 메소드 활용</title>
+</head>
+
+<body>
+    <h3>String 객체의 메소드 활용</h3>
+    <hr>
+    <script>
+        function prtDocument(str) {
+            document.write(str + "<br>");
+        }
+
+        var a = "Boys and Girls";
+        var b = "!!";
+
+        prtDocument("a: " + a);
+        prtDocument("b: " + b);
+        document.write("<hr>");
+
+        prtDocument(a.charAt(0));
+        prtDocument(a.concat(b) + "입니다");
+        prtDocument(a.indexOf("s"));
+        prtDocument(a.indexOf("And"));
+        prtDocument(a.slice(5, 8));
+        prtDocument(a.substr(5, 8));
+        prtDocument(a.toUpperCase());
+        prtDocument(a.replace("and", "or"));
+        prtDocument(a.indexOf("s"));
+        prtDocument("   kitae   ".trim());
+        document.write("<hr>");
+
+        var sub = a.split(" ");
+        prtDocument("a를 빈칸으로 분리");
+        prtDocument("sub0 = " + sub[0]);
+        prtDocument("sub1 = " + sub[1]);
+        prtDocument("sub2 = " + sub[2]);
+        document.write("<hr>");
+
+        prtDocument("String 메소드를 실행 후 a와 b 변함 없음");
+        prtDocument("a: " + a);
+        prtDocument("b: " + b);
+    </script>
+</body>
+
+</html>

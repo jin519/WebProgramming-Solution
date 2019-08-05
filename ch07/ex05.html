@@ -1,0 +1,46 @@
+<!-- 338p 실습문제 5번 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>문자열 배열 다루기</title>
+</head>
+
+<body>
+    <h3>문자열 배열 다루기</h3>
+    <hr>
+    <script>
+        function printArray(array) {
+            for (var i = 0; i < array.length; ++i)
+                document.write(array[i] + "&nbsp;&nbsp;&nbsp;");
+            document.write("<br>");
+        }
+
+        function getLongestItem(array) {
+            var retVal = array[0].length;
+
+            for (var i = 1; i < array.length; ++i)
+                if (retVal < array[i].length)
+                    retVal = array[i];
+
+            return retVal;
+        }
+
+        var names = new Array("wonsun", "jaemoonlee", "kitae", "gracehwang");
+
+        document.write("이름: ");
+        printArray(names);
+
+        document.write("가장 긴 이름: " + getLongestItem(names) + "<br>");
+
+        names.sort();
+        document.write("가장 먼저 나오는 이름: " + names[0] + "<br>");
+       
+        document.write("증가 순 이름: ")
+        printArray(names);
+    </script>
+</body>
+
+</html>

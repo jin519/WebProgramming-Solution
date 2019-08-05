@@ -1,0 +1,45 @@
+<!-- 341p 실습문제 10번 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>book 객체 배열 만들기</title>
+</head>
+
+<body>
+    <h3>book 객체 배열 만들기</h3>
+    <hr>
+    <script>
+        var book = new Object();
+        book.title = "";
+        book.author = "";
+        book.price = 0;
+
+        var bookArray = new Array();
+        var mostExpensiveBookIndex = 0;
+
+        for (var i = 0; i < 5; ++i) {
+            var input = prompt("콤마(,)로 분리하면서 책제목 저자 가격 순으로 입력", 0);
+            document.write(input + "<br>");
+
+            var inputArray = input.split(",");
+
+            var book = new Object();
+            book.title = inputArray[0].trim();
+            book.author = inputArray[1].trim();
+            book.price = inputArray[2].trim();
+
+            bookArray.push(book);
+
+            if (bookArray[mostExpensiveBookIndex].price < book.price)
+                mostExpensiveBookIndex = i;
+        }
+
+        document.write("<hr>");
+        document.write("가장 가격이 비싼 책은 " + bookArray[mostExpensiveBookIndex].title + "<br>");
+    </script>
+</body>
+
+</html>

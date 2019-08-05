@@ -1,0 +1,50 @@
+<!-- 318p 예제 7-4 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Array 객체의 메소드 활용</title>
+</head>
+
+<body>
+    <h3>Array 객체의 메소드 활용</h3>
+    <hr>
+    <script>
+        function prtDocument(str, arr) {
+            document.write(str + arr + "<br>");
+        }
+
+        var a = ["황", "김", "이"];
+        var b = ["박"];
+
+        prtDocument("배열 a = ", a);
+        prtDocument("배열 b = ", b);
+        document.write("<hr>");
+
+        c = a.concat(b);
+        prtDocument("c = a.concat(b)후 c = ", c);
+        prtDocument("c = a.concat(b)후 a = ", a);
+
+        c = a.join("##");
+        prtDocument("c = a.join()후 c = ", c);
+        prtDocument("c = a.join()후 a = ", a);
+
+        c = a.reverse();
+        prtDocument("c = a.reverse()후 c = ", c);
+        prtDocument("c = a.reverse()후 a = ", a);
+
+        c = a.slice(1, 2);
+        prtDocument("c = a.slice(1, 2)후 c = ", c);
+        prtDocument("c = a.slice(1, 2)후 a = ", a);
+
+        c = a.sort();
+        prtDocument("c = a.sort()후 c = ", c);
+        prtDocument("c = a.sort()후 a = ", a);
+
+        document.write("a.toString(): " + a.toString() + "<br>");
+    </script>
+</body>
+
+</html>
