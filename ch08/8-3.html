@@ -1,0 +1,34 @@
+<!-- 358p 예제 8-3 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>innerHTML 활용</title>
+    <style>
+        #clickZone {
+            color: blue;
+        }
+
+        #clickZone span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>innerHTML 활용: 아래 글자에 클릭하면 예쁜 강아지가 보입니다.</h3>
+    <hr>
+    <p id="clickZone" onclick="onClickZoneClick()">
+        여기에 <span>클릭하세요</span>
+    </p>
+    <script>
+        function onClickZoneClick() {
+            var clickZone = document.getElementById("clickZone");
+            clickZone.innerHTML = "나의 <img src='resource/puppy.png'> 강아지";
+        }
+    </script>
+</body>
+
+</html>

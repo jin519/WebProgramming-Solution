@@ -1,0 +1,30 @@
+<!-- 382p 실습문제 10-1번 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>정답의 동적 삽입</title>
+</head>
+
+<body>
+    <h3>정답의 동적 삽입</h3>
+    <hr>
+    <div>
+        <p>Q. 거울아 거울아 세상에서 누가 제일 예쁘니?</p>
+        <button onclick="addAnswer(this, '백설공주')">답보기</button>
+    </div>
+    <div>
+        <p>Q. 죽느냐 사느냐 어떤 것이 문제인가?</p>
+        <button onclick="addAnswer(this, '둘다')">답보기</button>
+    </div>
+    <script>
+        function addAnswer(obj, text) {
+            var parent = obj.parentElement;
+            var answer = document.createElement("p");
+            answer.textContent = text;
+            parent.appendChild(answer);
+        }
+    </script>
+</body>

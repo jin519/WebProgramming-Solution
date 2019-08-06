@@ -1,0 +1,35 @@
+<!-- 359p 예제 8-4 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>this 활용</title>
+</head>
+
+<body>
+    <h3>this 활용</h3>
+    <hr>
+    <button onclick="changeFontAttributes(this, '30px', 'red')">버튼1</button>
+    <button onclick="changeFontAttributes(this, '30px', 'blue')">버튼2</button>
+    <p onclick="changeFontAttributes(this, '25px', 'orange')">
+        여기 클릭
+    </p>
+    <script>
+        function changeFontSize(obj, size) {
+            obj.style.fontSize = size;
+        }
+
+        function changeFontColor(obj, color) {
+            obj.style.color = color;
+        }
+
+        function changeFontAttributes(obj, size, color) {
+            changeFontSize(obj, size);
+            changeFontColor(obj, color);
+        }
+    </script>
+</body>
+
+</html>

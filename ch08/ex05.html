@@ -1,0 +1,52 @@
+<!-- 379p 실습문제 5번 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>z-index 스타일 프로퍼티</title>
+    <style>
+        div {
+            position: absolute;
+        }
+
+        img {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>z-index 스타일 프로퍼티</h3>
+    <hr>
+    <div>
+        <img src="resource/spade-A.png" width="100" height="140" alt="스페이드A">
+        <img src="resource/spade-2.png" width="100" height="140" alt="스페이드2">
+        <img src="resource/spade-3.png" width="100" height="140" alt="스페이드3">
+        <img src="resource/spade-7.png" width="100" height="140" alt="스페이드7">
+    </div>
+    <script>
+        var cards = document.getElementsByTagName("img");
+
+        for (var i = 0; i < cards.length; ++i) {
+            var card = cards[i];
+            card.style.zIndex = i;
+            card.style.left = "10px";
+            card.style.top = "10px";
+            card.addEventListener("click", onCardClick);
+        }
+
+        function onCardClick() {
+            var cardSize = cards.length;
+
+            for (var i = 0; i < cardSize; ++i) {
+                var card = cards[i];
+                card.style.zIndex++;
+                card.style.zIndex %= cardSize;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!-- 378p 실습문제 3번 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>다음 빈 곳에 숨은 단어?</title>
+</head>
+
+<body>
+    <h3>다음 빈 곳에 숨은 단어?
+        <button onclick="onButtonClick()">show/hide</button>
+    </h3>
+    <hr>
+    <ul>
+        <li>I (<span>love</span>) you.</li>
+        <li>CSS is Cascading (<span>Style</span>) Sheet.</li>
+        <li>응답하라 (<span>1988</span>).</li>
+    </ul>
+    <script>
+        var isShown = true;
+        var answers = document.getElementsByTagName("span");
+
+        function onButtonClick() {
+            if (isShown == false) {
+                for (var i = 0; i < answers.length; ++i)
+                    answers[i].style.visibility = "hidden";
+            } else {
+                for (var i = 0; i < answers.length; ++i)
+                    answers[i].style.visibility = "visible";
+            }
+
+            // 보여질지 여부를 토글한다. 
+            isShown = !isShown;
+        }
+    </script>
+</body>
+
+</html>

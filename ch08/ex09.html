@@ -1,0 +1,29 @@
+<!-- 381p 실습문제 9번 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>라면을 끓이는 순서</title>
+</head>
+
+<body>
+    <h3>라면을 끓이는 순서</h3>
+    <hr>
+    <ol type="A" style="background-color: yellowgreen;" onclick="onListClick(this)">
+        <li>물을 끓인다.</li>
+    </ol>
+    <script>
+        function onListClick(obj) {
+            var input = prompt("라면을 끓이는 순서를 입력하라.", 0);
+
+            var newList = document.createElement("li");
+            newList.textContent = input;
+
+            obj.appendChild(newList);
+        }
+    </script>
+</body>
+
+</html>

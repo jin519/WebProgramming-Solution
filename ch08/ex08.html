@@ -1,0 +1,26 @@
+<!-- 381p 실습문제 8번 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>클릭하면 2,3,4배로 옆으로 늘어납니다.</title>
+</head>
+
+<body>
+    <h3>클릭하면 2,3,4배로 옆으로 늘어납니다.</h3>
+    <hr>
+    <img src="resource/spongebob.png" onclick="onImageClick(this)">
+    <script>
+        var scaleFactor = 2;
+
+        function onImageClick(obj) {
+            var scaleStr = ("scale(" + scaleFactor + ",1)");
+            obj.style.transform = scaleStr;
+            ++scaleFactor;
+        }
+    </script>
+</body>
+
+</html>

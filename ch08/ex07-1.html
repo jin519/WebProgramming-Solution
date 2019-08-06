@@ -1,0 +1,23 @@
+<!-- 381p 실습문제 7-1번 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>클릭하면 90도 회전합니다</title>
+</head>
+
+<body>
+    <h3>클릭하면 90도 회전합니다</h3>
+    <hr>
+    <img src="resource/spongebob.png" onclick="onImageClick(this)">
+    <script>
+        function onImageClick(obj) 
+        {
+            obj.style.transform="rotate(90deg)";
+        }
+    </script>
+</body>
+
+</html>
