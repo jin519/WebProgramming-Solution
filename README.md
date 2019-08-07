@@ -10,3 +10,4 @@
 [chapter 6 - 자바스크립트 언어]<br>
 [chapter 7 - 자바스크립트 코어 객체와 배열]<br>
 [chapter 8 - HTML DOM과 Document]<br>
+[chapter 9 - 이벤트 기초 및 활용]<br>
