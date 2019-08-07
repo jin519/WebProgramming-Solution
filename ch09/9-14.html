@@ -1,0 +1,47 @@
+<!-- 409p 예제 9-14 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>onload로 이미지 크기 출력</title>
+</head>
+
+<body onload="init(), onImageLoad()">
+    <h3>onload로 이미지 크기 출력</h3>
+    <hr>
+    <form>
+        <select id="imgSelector">
+            <option value="resource/apple.png">사과</option>
+            <option value="resource/banana.png" selected>바나나</option>
+            <option value="resource/mango.png">망고</option>
+        </select>
+        <span id="imgSizeArea"></span><br>
+    </form>
+    <img id="img" src="resource/banana.png"><br>
+    <script>
+        var imgSelector;
+        var imgSizeArea;
+        var img;
+
+        function init() {
+            imgSelector = document.getElementById("imgSelector");
+            imgSelector.addEventListener("change", changeImg);
+            imgSizeArea = document.getElementById("imgSizeArea");
+            img = document.getElementById("img");
+            img.addEventListener("load", onImageLoad);
+        }
+
+        function onImageLoad() {
+            imgSizeArea.innerText = (img.width + "*" + img.height);
+        }
+
+        function changeImg() {
+            var selectedIndex = imgSelector.selectedIndex;
+            img.src = imgSelector.options[selectedIndex].value;
+        }
+    </script>
+</body>
+
+</html>

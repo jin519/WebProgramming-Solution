@@ -1,0 +1,32 @@
+<!-- 390p 예제 9-4 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>익명 함수로 이벤트 리스너 작성</title>
+</head>
+
+<body onload="init()">
+    <h3>익명 함수로 이벤트 리스너 작성</h3>
+    <hr>
+    <p id="changingBgColorZone">
+        마우스를 올리면 orchid 색으로 변경
+    </p>
+    <script>
+        var changingBgColorZone;
+
+        function init() {
+            changingBgColorZone = document.getElementById("changingBgColorZone");
+            changingBgColorZone.addEventListener("mouseover", function () {
+                this.style.backgroundColor = "orchid";
+            })
+            changingBgColorZone.addEventListener("mouseout", function () {
+                this.style.backgroundColor = "white";
+            })
+        }
+    </script>
+</body>
+
+</html>

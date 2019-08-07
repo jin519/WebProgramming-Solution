@@ -1,0 +1,39 @@
+<!-- 417p 예제 9-19 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>select 객체에서 선택한 과일 출력</title>
+</head>
+
+<body onload="init(), onSelectFruit()">
+    <h3>select 객체에서 선택한 과일 출력</h3>
+    <hr>
+    <p>
+        과일을 선택하면 이미지가 출력됩니다.
+    </p>
+    <select id="fruitSelector">
+        <option value="resource/strawberry.png">딸기</option>
+        <option value="resource/banana.png">바나나</option>
+        <option value="resource/apple.png">사과</option>
+    </select>
+    <img id="fruitImage" src=""><br>
+    <script>
+        var fruitSelector;
+        var fruitImage;
+
+        function init() {
+            fruitSelector = document.getElementById("fruitSelector");
+            fruitSelector.onchange = onSelectFruit;
+            fruitImage = document.getElementById("fruitImage");
+        }
+
+        function onSelectFruit() {
+            fruitImage.src = fruitSelector.options[fruitSelector.selectedIndex].value;
+        }
+    </script>
+</body>
+
+</html>

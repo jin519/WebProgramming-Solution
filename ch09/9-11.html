@@ -1,0 +1,48 @@
+<!-- 405p 예제 9-11 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>마우스 이벤트 객체의 프로퍼티와 onmousemove</title>
+    <style>
+        #mouseInfoArea {
+            background-color: skyblue;
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body onload="init()">
+    <h3>마우스 이벤트 객체의 프로퍼티와 onmousemove</h3>
+    <hr>
+    <p>
+        이미지 위에 마우스를 움직일 때 onmousemove 리스너가 실행되고,<br>
+        마우스의 위치를 보여줍니다.
+    </p>
+    <img id="targetImg" src="resource/beach.png"><br>
+    <div id="mouseInfoArea"></div>
+    <script>
+        var mouseInfoArea;
+        var targetImg;
+
+        function init() {
+            mouseInfoArea = document.getElementById("mouseInfoArea");
+            targetImg = document.getElementById("targetImg");
+            targetImg.addEventListener("mousemove", onMouseMove);
+        }
+
+        function onMouseMove(event) {
+            var text = ("버튼: " + event.button + "<br>");
+            text += ("(screenX, screenY): (" + event.screenX + ", " + event.screenY + ")" + "<br>");
+            text += ("(clientX, clientY): (" + event.clientX + ", " + event.clientY + ")" + "<br>");
+            text += ("(offsetX, offsetY): (" + event.offsetX + ", " + event.offsetY + ")" + "<br>");
+            text += ("(x, y): (" + event.x + ", " + event.y + ")");
+
+            mouseInfoArea.innerHTML = text;
+        }
+    </script>
+</body>
+
+</html>

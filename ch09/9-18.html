@@ -1,0 +1,45 @@
+<!-- 415p 예제 9-18 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>선택된 물품 계산하기</title>
+</head>
+
+<body onload="init()">
+    <h3>물품을 선택하면 금액이 자동 계산됩니다</h3>
+    <hr>
+    <form>
+        <input class="productList" type="checkbox" value="10000">모자 1만원
+        <input class="productList" type="checkbox" value="30000">구두 3만원
+        <input class="productList" type="checkbox" value="80000">가방 8만원<br>
+        지불하실 금액 <input id="priceForm" type="text" disabled>
+    </form>
+    <script>
+        var products;
+        var totalPrice = 0;
+        var priceForm;
+
+        function init() {
+            products = document.getElementsByClassName("productList");
+
+            for (var i = 0; i < products.length; ++i)
+                products[i].onchange = onProductChange;
+
+            priceForm = document.getElementById("priceForm");
+        }
+
+        function onProductChange() {
+            if (this.checked == true)
+                totalPrice += parseInt(this.value);
+            else
+                totalPrice -= parseInt(this.value);
+
+            priceForm.value = totalPrice;
+        }
+    </script>
+</body>
+
+</html>

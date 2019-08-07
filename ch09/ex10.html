@@ -1,0 +1,84 @@
+<!-- 429p 실습문제 10번 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>계산기 만들기</title>
+    <style>
+        button {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body onload="init()">
+    <h3>계산기 만들기</h3>
+    <hr>
+    <input id="inputForm" type="text" disabled><br>
+    <button id="backButton" type="button">BACK</button>
+    <button class="clearButton" type="button">CE</button>
+    <button class="clearButton" type="button">C</button>
+    <button id="calculationButton" type="button">=</button><br>
+    <button class="numberButton" type="button">7</button>
+    <button class="numberButton" type="button">8</button>
+    <button class="numberButton" type="button">9</button>
+    <button class="numberButton" type="button">/</button><br>
+    <button class="numberButton" type="button">4</button>
+    <button class="numberButton" type="button">5</button>
+    <button class="numberButton" type="button">6</button>
+    <button class="numberButton" type="button">*</button><br>
+    <button class="numberButton" type="button">1</button>
+    <button class="numberButton" type="button">2</button>
+    <button class="numberButton" type="button">3</button>
+    <button class="numberButton" type="button">-</button><br>
+    <button class="numberButton" type="button">0</button>
+    <button class="numberButton" type="button">+</button>
+    <button type="button">NONE</button>
+    <button type="button">NONE</button><br>
+    <script>
+        var inputForm;
+        var numberButtons;
+        var backButton;
+        var clearButtons;
+        var calculationButton;
+
+        function init() {
+            inputForm = document.getElementById("inputForm");
+
+            backButton = document.getElementById("backButton");
+            backButton.onclick = onBackButtonClick;
+
+            numberButtons = document.getElementsByClassName("numberButton");
+            for (var i = 0; i < numberButtons.length; ++i)
+                numberButtons[i].onclick = onNumberButtonClick;
+
+            clearButtons = document.getElementsByClassName("clearButton");
+            for (var i = 0; i < clearButtons.length; ++i)
+                clearButtons[i].onclick = onClearButtonClick;
+
+            calculationButton = document.getElementById("calculationButton");
+            calculationButton.onclick = onCalculationButtonClick;
+        }
+
+        function onNumberButtonClick() {
+            inputForm.value += this.innerText;
+        }
+
+        function onBackButtonClick() {
+            var str = inputForm.value;
+            inputForm.value = str.substr(0, str.length - 1);
+        }
+
+        function onClearButtonClick() {
+            inputForm.value = "";
+        }
+
+        function onCalculationButtonClick() {
+            inputForm.value = eval(inputForm.value);
+        }
+    </script>
+</body>
+
+</html>

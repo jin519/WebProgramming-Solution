@@ -1,0 +1,36 @@
+<!-- 393p 예제 9-6 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트 객체의 프로퍼티 출력</title>
+</head>
+
+<body onload="init()">
+    <h3>이벤트 객체의 프로퍼티 출력</h3>
+    <hr>
+    <p id="textArea">
+        버튼을 클릭하면 이벤트 객체를 출력합니다.
+    </p>
+    <button type="button" onclick="f(event)">클릭하세요</button>
+    <script>
+        var textArea;
+
+        function init() {
+            textArea = document.getElementById("textArea");
+        }
+
+        function f(event) {
+            var text = ("type: " + event.type + "<br>");
+            text += ("target: " + event.target + "<br>");
+            text += ("currentTarget: " + event.currentTarget + "<br>");
+            text += ("defaultPrevented: " + event.defaultPrevented + "<br>");
+
+            textArea.innerHTML = text;
+        }
+    </script>
+</body>
+
+</html>

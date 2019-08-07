@@ -1,0 +1,40 @@
+<!-- 425p 실습문제 2번 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>라디오 버튼과 이미지 출력</title>
+</head>
+
+<body onload="init()">
+    <h3>라디오 버튼을 클릭하면 이미지를 출력합니다.</h3>
+    <hr>
+    <form id="fruitForm" onchange="drawImage()">
+        <input type="radio" name="fruit" value="resource/banana.png" checked>바나나
+        <input type="radio" name="fruit" value="resource/mango.png">망고
+        <input type="radio" name="fruit" value="resource/apple.png">사과
+    </form>
+    <img id="fruitImage" src=""><br>
+    <script>
+        var fruitRadioButtons;
+        var fruitImage;
+
+        function init() {
+            fruitRadioButtons = document.getElementsByName("fruit");
+            fruitImage = document.getElementById("fruitImage");
+
+            drawImage();
+        }
+
+        function drawImage() {
+            for (i = 0; i < fruitRadioButtons.length; ++i) {
+                if (fruitRadioButtons[i].checked)
+                    fruitImage.src = fruitRadioButtons[i].value;
+            }
+        }
+    </script>
+</body>
+
+</html>

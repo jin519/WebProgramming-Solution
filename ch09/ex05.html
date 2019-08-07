@@ -1,0 +1,38 @@
+<!-- 426p 실습문제 5번 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>바탕 아무 곳이나 더블 클릭</title>
+</head>
+
+<body onload=init()>
+    <h3>바탕 아무 곳이나 더블 클릭</h3>
+    <hr>
+    <p>
+        바탕 아무 곳이나 <b>더블클릭</b>하면 배경색이 랜덤하게 변합니다.
+    </p>
+    <script>
+        function init() {
+            window.ondblclick = onDoubleClick;
+        }
+
+        function randomInt(rangeStart, rangeEnd) {
+            var retVal = (Math.random() * (rangeEnd - rangeStart + 1));
+            return (Math.floor(retVal) + rangeStart);
+        }
+
+        function onDoubleClick() {
+            var color = "rgb(";
+            color += (randomInt(0, 255) + ", ");
+            color += (randomInt(0, 255) + ", ");
+            color += (randomInt(0, 255) + ")");
+
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</body>
+
+</html>

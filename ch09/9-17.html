@@ -1,0 +1,36 @@
+<!-- 414p 예제 9-17 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>선택된 라디오 버튼 알아내기</title>
+</head>
+
+<body onload="init()">
+    <h3>버튼을 클릭하면 선택된 라디오 버튼의 value를 출력합니다.</h3>
+    <hr>
+    <form>
+        <input type="radio" name="city" value="seoul" checked>서울
+        <input type="radio" name="city" value="busan">부산
+        <input type="radio" name="city" value="chunchen">춘천
+        <button type="button" onclick="findCheckedCityRatioButton()">find checked</button>
+    </form>
+    <script>
+        var cityRadioButtons;
+
+        function init() {
+            cityRadioButtons = document.getElementsByName("city");
+        }
+
+        function findCheckedCityRatioButton() {
+            for (var i = 0; i < cityRadioButtons.length; ++i) {
+                if (cityRadioButtons[i].checked == true)
+                    alert(cityRadioButtons[i].value + "이 선택되었음!");
+            }
+        }
+    </script>
+</body>
+
+</html>

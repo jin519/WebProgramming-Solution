@@ -1,0 +1,40 @@
+<!-- 427p 실습문제 7번 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>span 태그에만 onmouseover/onmouseout</title>
+</head>
+
+<body onload="init()">
+    <h3>span 태그에만 onmouseover/onmouseout</h3>
+    <hr>
+    <p>
+        span 태그에 대해서만 <span>마우스</span>가 올라올 때 밑줄이 그어지고<br>
+        <span>마우스</span>가 내려갈 때 밑줄이 사라지도록 <span>자바스크립트 코드</span>를 작성한다.
+    </p>
+    <script>
+        var spans;
+
+        function init() {
+            spans = document.getElementsByTagName("span");
+
+            for (i = 0; i < spans.length; ++i) {
+                spans[i].onmouseover = onMouseOver;
+                spans[i].onmouseout = onMouseOut;
+            }
+        }
+
+        function onMouseOver() {
+            this.style.textDecoration = "underline";
+        }
+
+        function onMouseOut() {
+            this.style.textDecoration = "none";
+        }
+    </script>
+</body>
+
+</html>

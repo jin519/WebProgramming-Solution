@@ -1,0 +1,40 @@
+<!-- 426p 실습문제 4번 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>이미지 커서 만들기</title>
+    <style>
+        #imgCursor {
+            position: absolute;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body onload="init()">
+    <h3>이미지 커서 만들기</h3>
+    <hr>
+    <p>
+        마우스를 움직이면 이미지로 만든 커서가 마우스를 따라 다닙니다.
+    </p>
+    <div id="imgCursor" hidden>
+        <img src="resource/spongebob.png" width="30px" height="30px">
+    </div>
+    <script>
+        var imgCursor;
+
+        function init() {
+            imgCursor = document.getElementById("imgCursor");
+            window.onmousemove = onMouseMove;
+        }
+
+        function onMouseMove(event) 
+        {
+            imgCursor.hidden = false;
+            imgCursor.style.top = event.clientY + "px";
+            imgCursor.style.left = event.clientX + "px";
+        }
+    </script>
+</body>
+</html>

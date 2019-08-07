@@ -1,0 +1,69 @@
+<!-- 404p 예제 9-10 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>마우스 관련 이벤트 리스너</title>
+    <style>
+        #eventArea {
+            border-radius: 50%;
+            text-align: center;
+            border: 1px dashed red;
+        }
+    </style>
+</head>
+
+<body onload="init()">
+    <h3>마우스 관련 이벤트 리스너</h3>
+    <hr>
+    <p>
+        마우스 관련 <span id="eventArea">이벤트</span>가 발생합니다.
+    </p>
+    <script>
+        var eventArea;
+        var borderWidth = 1;
+
+        function init() {
+            eventArea = document.getElementById("eventArea");
+            eventArea.addEventListener("wheel", onWheel);
+            eventArea.addEventListener("mouseover", onMouseOver);
+            eventArea.addEventListener("mouseout", onMouseOut);
+            eventArea.addEventListener("mousedown", onMouseDown);
+            eventArea.addEventListener("mouseup", onMouseUp);
+        }
+
+        function onMouseOver() {
+            eventArea.style.borderColor = "violet";
+        }
+
+        function onWheel(event) {
+            // 휠을 아래로 굴릴 때
+            if (event.wheelDelta < 0) {
+                --borderWidth;
+
+                if (borderWidth < 0)
+                    borderWidth = 0;
+            } else
+                ++borderWidth;
+
+            eventArea.style.borderStyle = "ridge";
+            eventArea.style.borderWidth = (borderWidth + "px");
+        }
+
+        function onMouseDown() {
+            eventArea.style.fontStyle = "italic";
+        }
+
+        function onMouseUp() {
+            eventArea.style.fontStyle = "normal";
+        }
+
+        function onMouseOut() {
+            eventArea.style.borderColor = "lightgray";
+        }
+    </script>
+</body>
+
+</html>

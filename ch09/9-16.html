@@ -1,0 +1,39 @@
+<!-- 412p 예제 9-16 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>onfocus와 onblur</title>
+</head>
+
+<body onload="init()">
+    <h3>onfocus와 onblur</h3>
+    <hr>
+    <p>
+        이름을 입력하지 않고 다른 창으로 이동할 수 없습니다.
+    </p>
+    <form>
+        이름 <input id="nameForm" type="text"><br>
+        학번 <input type="number">
+    </form>
+    <script>
+        var nameForm;
+
+        function init() {
+            nameForm = document.getElementById("nameForm");
+            nameForm.focus();
+            nameForm.onblur = checkFilled;
+        }
+
+        function checkFilled() {
+            if (nameForm.value == "") {
+                alert("이름을 먼저 입력하세요!");
+                nameForm.focus();
+            }
+        }
+    </script>
+</body>
+
+</html>

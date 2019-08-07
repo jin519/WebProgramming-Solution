@@ -1,0 +1,72 @@
+<!-- 421p Open Challenge 09 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>마우스 클릭 연습</title>
+    <style>
+        #grid {
+            border-collapse: collapse;
+        }
+
+        #grid td {
+            border-width: 2px;
+            border-style: solid;
+            border-color: darkblue;
+            width: 80px;
+            height: 80px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body onload="init()">
+    <h3>이미지를 클릭해보세요!</h3>
+    <hr>
+    <table id="grid">
+    </table>
+    <script>
+        var grid;
+        var cells;
+
+        function init() {
+            grid = document.getElementById("grid");
+            drawGrid();
+            cells = document.getElementsByTagName("td");
+            drawImage();
+        }
+
+        function drawGrid() {
+            var tags = "";
+
+            for (i = 0; i < 10; ++i) {
+                tags += "<tr>";
+                for (j = 0; j < 10; ++j)
+                    tags += "<td></td>";
+                tags += "</tr>"
+            }
+
+            grid.innerHTML = tags;
+        }
+
+        function randomInt(rangeStart, rangeEnd) {
+            var retVal = (Math.random() * (rangeEnd - rangeStart + 1));
+            return (Math.floor(retVal) + rangeStart);
+        }
+
+        function drawImage() {
+            var newImage = document.createElement("img");
+            newImage.src = "resource/donkey.jpg";
+            newImage.addEventListener("click", function () {
+                this.parentElement.removeChild(this);
+                drawImage();
+            });
+
+            cells[randomInt(0, 99)].appendChild(newImage);
+        }
+    </script>
+</body>
+
+</html>

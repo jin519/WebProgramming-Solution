@@ -1,0 +1,47 @@
+<!-- 427p 실습문제 6번 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>마우스 휠을 이용한 이미지 확대/축소</title>
+</head>
+
+<body onload="init()">
+    <h3>마우스 휠을 이용한 이미지 확대/축소</h3>
+    <hr>
+    <p>
+        마우스 위에 휠을 위로 올리면 이미지가 축소되고<br>
+        아래로 굴리면 이미지가 확대됩니다.
+    </p>
+    <img id="targetImg" src="resource/tulips.png">
+    <script>
+        var targetImg;
+        var scale = 100;
+
+        function init() {
+            targetImg = document.getElementById("targetImg");
+            targetImg.onwheel = onWheel;
+        }
+
+        function onWheel(event) {
+            if (event.wheelDelta < 0) {
+                scale += 5;
+
+                if (scale > 100)
+                    scale = 100;
+            } else {
+                scale -= 5;
+
+                if (scale < 0)
+                    scale = 0;
+            }
+
+            targetImg.style.width = scale + "%";
+            targetImg.style.height = scale + "%";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!-- 402p 예제 9-9 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>onclick</title>
+</head>
+
+<body onload="init()">
+    <h3>onclick, 계산기 만들기</h3>
+    <hr>
+    <p>
+        계산하고자 하는 수식을 입력하고<br>
+        계산 버튼을 눌러봐요.
+    </p>
+    <form>
+        식&nbsp;&nbsp;<input id="input" type="text" value=""><br>
+        값&nbsp;&nbsp;<input id="answerArea" type="text" value="" disabled>&nbsp;
+        <button type="button" onclick="calculate(this)">계산</button>
+    </form>
+    <script>
+        var input;
+        var answerArea;
+
+        function init() {
+            input = document.getElementById("input");
+            answerArea = document.getElementById("answerArea");
+        }
+
+        function calculate(obj) {
+            var expression = input.value;
+            answerArea.value = eval(expression);
+        }
+    </script>
+</body>
+
+</html>

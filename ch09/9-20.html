@@ -1,0 +1,69 @@
+<!-- 419p 예제 9-20 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>키 이벤트</title>
+    <style>
+        #resultArea {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body onload=init()>
+    <h3>키 리스너와 키 이벤트 객체의 프로퍼티</h3>
+    <hr>
+    <p>
+        텍스트 창에 키를 눌러 보세요.<br>
+        Alt, Shift, Ctrl 키도 가능합니다.
+    </p>
+    <input id="inputKeyForm" type="text"><br>
+    <div id="resultArea"></div>
+    <script>
+        var inputKeyForm;
+        var resultArea;
+
+        function init() {
+            inputKeyForm = document.getElementById("inputKeyForm");
+            inputKeyForm.onkeydown = onKeyDown;
+            resultArea = document.getElementById("resultArea");
+        }
+
+        function onKeyDown(event) {
+            resultArea.innerHTML = "";
+            var result = "";
+
+            if (event.altKey) {
+                if (event.altLeft)
+                    result += "왼쪽 ALT 키가 눌러졌습니다.";
+                else
+                    result += "오른쪽 ALT 키가 눌러졌습니다.";
+                result += "<br>";
+            }
+
+            if (event.ctrlKey) {
+                if (event.ctrlLeft)
+                    result += "왼쪽 CTRL 키가 눌러졌습니다.";
+                else
+                    result += "오른쪽 CTRL 키가 눌러졌습니다.";
+                result += "<br>";
+            }
+
+            if (event.shiftKey) {
+                if (event.shiftLeft)
+                    result += "왼쪽 SHIFT 키가 눌러졌습니다.";
+                else
+                    result += "오른쪽 SHIFT 키가 눌러졌습니다.";
+                result += "<br>";
+            }
+
+            result += String.fromCharCode(event.keyCode) + "키가 눌러졌습니다."
+            resultArea.innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!-- 389p 예제 9-3 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>addEventListener()를 이용한 리스너 등록</title>
+</head>
+
+<body onload="init()">
+    <h3>addEventListener()를 이용한 리스너 등록</h3>
+    <hr>
+    <p id="changingBgColorZone">
+        마우스를 올리면 orchid 색으로 변경
+    </p>
+    <script>
+        var changingBgColorZone;
+
+        function init() {
+            changingBgColorZone = document.getElementById("changingBgColorZone");
+            changingBgColorZone.addEventListener("mouseover", onMouseOver);
+            changingBgColorZone.addEventListener("mouseout", onMouseOut);
+        }
+
+        function onMouseOver() {
+            changingBgColorZone.style.backgroundColor = "orchid";
+        }
+
+        function onMouseOut() {
+            changingBgColorZone.style.backgroundColor = "white";
+        }
+    </script>
+</body>
+
+</html>

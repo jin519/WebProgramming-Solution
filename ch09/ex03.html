@@ -1,0 +1,37 @@
+<!-- 426p 실습문제 3번 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>계산기 만들기</title>
+</head>
+
+<body onload="init()">
+    <h3>계산기 만들기</h3>
+    <hr>
+    <p>
+        수식을 입력하고 &lt;Enter&gt;를 입력하세요.
+    </p>
+    식 <input id="inputForm" type="text"><br>
+    값 <input id="resultForm" type="text" disabled><br>
+    <script>
+        var inputForm;
+        var resultForm;
+
+        function init() {
+            inputForm = document.getElementById("inputForm");
+            inputForm.addEventListener("keydown", onKeyDown);
+            resultForm = document.getElementById("resultForm");
+        }
+
+        function onKeyDown(event) {
+            if (event.keyCode == 13) {
+                resultForm.value = eval(inputForm.value);
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!-- 411p 예제 9-15 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>new Image()로 이미지 로딩</title>
+</head>
+
+<body onload="init()">
+    <h3>new Image()로 이미지 로딩</h3>
+    <hr>
+    <p>
+        이미지를 클릭하면 다음 이미지를 보여줍니다.
+    </p>
+    <script>
+        var images = new Array();
+        var currentImgIndex = 0;
+        var image;
+
+        function init() {
+            var files = new Array();
+            files[0] = "resource/Penguins.png";
+            files[1] = "resource/Lighthouse.png";
+            files[2] = "resource/Chrysanthemum.png";
+            files[3] = "resource/Desert.png";
+            files[4] = "resource/Hydrangeas.png";
+            files[5] = "resource/Jellyfish.png";
+            files[6] = "resource/Koala.png";
+            files[7] = "resource/tulips.png";
+
+            for (var i = 0; i < files.length; ++i) {
+                images[i] = new Image();
+                images[i].src = files[i];
+            }
+
+            image = document.createElement("img");
+            image.src = files[currentImgIndex];
+            image.style.borderWidth = "20px";
+            image.style.borderStyle = "ridge";
+            image.style.borderColor = "wheat";
+            image.addEventListener("click", onImageClick);
+
+            document.body.appendChild(image);
+        }
+
+        function onImageClick() {
+            ++currentImgIndex;
+            currentImgIndex %= images.length;
+            image.src = images[currentImgIndex].src;
+        }
+    </script>
+</body>
+
+</html>

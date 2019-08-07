@@ -1,0 +1,45 @@
+<!-- 428p 실습문제 8번 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>아이템을 클릭하면 1.3배 크기로</title>
+</head>
+
+<body onload="init()">
+    <h3>아이템을 클릭하면 1.3배 크기로</h3>
+    <hr>
+    <p>
+        여름 방학 때 하고 싶은 것들<br>
+        <ul>
+            <li>자전거로 대한민국 일주</li>
+            <li>책 100권 읽기</li>
+            <li>철인 3종 경기 준비</li>
+            <li>자바스크립트 정복</li>
+        </ul>
+    </p>
+    <script>
+        var list;
+        var prevObj = null;
+
+        function init() {
+            list = document.getElementsByTagName("li");
+
+            for (var i = 0; i < list.length; ++i)
+                list[i].onclick = onClick;
+        }
+
+        function onClick() {
+            this.style.fontSize = "1.3em";
+
+            if (prevObj != null)
+                prevObj.style.fontSize = "1em";
+
+            prevObj = this;
+        }
+    </script>
+</body>
+
+</html>
