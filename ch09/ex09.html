@@ -7,9 +7,15 @@
     <meta charset="UTF-8">
     <title>아이템에 마우스를 올리면 설명 출력</title>
     <style>
+        ul {
+            display: inline-block;
+        }
+
         #commentArea {
             background-color: skyblue;
             position: absolute;
+            display: inline-block;
+            visibility: hidden;
         }
     </style>
 </head>
@@ -19,34 +25,31 @@
     <hr>
     여름 방학 때 하고 싶은 것들<br>
     <ul>
-        <li id="list0">자전거로 대한민국 일주</li>
+        <li id="commentList">자전거로 대한민국 일주</li>
         <li>책 100권 읽기</li>
         <li>철인 3종 경기 준비</li>
         <li>자바스크립트 정복</li>
     </ul>
-    <div id="commentArea" hidden>
-        빨간 자전거를 타고 서울, 대전, 대구, 부산 찍고,
-        목포, 인천을 거쳐 달린다.
+    <div id="commentArea">
+        빨간 자전거를 타고 서울, 대전, 대구, 부산 찍고, 목포, 인천을 거쳐 달린다.
     </div>
     <script>
-        var list0;
+        var commentList;
         var commentArea;
 
         function init() {
-            list0 = document.getElementById("list0");
+            commentList = document.getElementById("commentList");
             commentArea = document.getElementById("commentArea");
-            list0.onmouseover = onMouseOver;
-            list0.onmouseout = onMouseOut;
-        }
 
-        function onMouseOver(event) {
-            commentArea.hidden = false;
-            event.target.style.left = event.clientX + "px";
-            event.target.style.top = event.clientY + "px";
-        }
+            commentList.onmouseover = function (event) {
+                commentArea.style.left = event.clientX + "px";
+                commentArea.style.top = event.clientY + "px";
+                commentArea.style.visibility = "visible";
+            };
 
-        function onMouseOut(event) {
-            commentArea.hidden = true;
+            commentList.onmouseout = function (event) {
+                commentArea.style.visibility = "hidden";
+            };
         }
     </script>
 </body>

@@ -16,67 +16,63 @@
 <body onload="init()">
     <h3>계산기 만들기</h3>
     <hr>
-    <input id="inputForm" type="text" disabled><br>
+    <input id="inputForm" type="text" size="55px" disabled><br>
     <button id="backButton" type="button">BACK</button>
     <button class="clearButton" type="button">CE</button>
     <button class="clearButton" type="button">C</button>
-    <button id="calculationButton" type="button">=</button><br>
-    <button class="numberButton" type="button">7</button>
-    <button class="numberButton" type="button">8</button>
-    <button class="numberButton" type="button">9</button>
-    <button class="numberButton" type="button">/</button><br>
-    <button class="numberButton" type="button">4</button>
-    <button class="numberButton" type="button">5</button>
-    <button class="numberButton" type="button">6</button>
-    <button class="numberButton" type="button">*</button><br>
-    <button class="numberButton" type="button">1</button>
-    <button class="numberButton" type="button">2</button>
-    <button class="numberButton" type="button">3</button>
-    <button class="numberButton" type="button">-</button><br>
-    <button class="numberButton" type="button">0</button>
-    <button class="numberButton" type="button">+</button>
+    <button id="calculatingButton" type="button">=</button><br>
+    <button class="appendingButton" type="button">7</button>
+    <button class="appendingButton" type="button">8</button>
+    <button class="appendingButton" type="button">9</button>
+    <button class="appendingButton" type="button">/</button><br>
+    <button class="appendingButton" type="button">4</button>
+    <button class="appendingButton" type="button">5</button>
+    <button class="appendingButton" type="button">6</button>
+    <button class="appendingButton" type="button">*</button><br>
+    <button class="appendingButton" type="button">1</button>
+    <button class="appendingButton" type="button">2</button>
+    <button class="appendingButton" type="button">3</button>
+    <button class="appendingButton" type="button">-</button><br>
+    <button class="appendingButton" type="button">0</button>
+    <button class="appendingButton" type="button">+</button>
     <button type="button">NONE</button>
     <button type="button">NONE</button><br>
     <script>
         var inputForm;
-        var numberButtons;
+        var appendingButtons;
         var backButton;
         var clearButtons;
-        var calculationButton;
+        var calculatingButton;
 
         function init() {
             inputForm = document.getElementById("inputForm");
 
             backButton = document.getElementById("backButton");
-            backButton.onclick = onBackButtonClick;
+            backButton.onclick = function () {
+                var str = inputForm.value;
+                inputForm.value = str.substr(0, str.length - 1);
+            };
 
-            numberButtons = document.getElementsByClassName("numberButton");
-            for (var i = 0; i < numberButtons.length; ++i)
-                numberButtons[i].onclick = onNumberButtonClick;
+            appendingButtons = document.getElementsByClassName("appendingButton");
+            for (var i = 0; i < appendingButtons.length; ++i)
+                appendingButtons[i].onclick = onappendingButtonClick;
 
             clearButtons = document.getElementsByClassName("clearButton");
             for (var i = 0; i < clearButtons.length; ++i)
                 clearButtons[i].onclick = onClearButtonClick;
 
-            calculationButton = document.getElementById("calculationButton");
-            calculationButton.onclick = onCalculationButtonClick;
+            calculatingButton = document.getElementById("calculatingButton");
+            calculatingButton.onclick = function () {
+                inputForm.value = eval(inputForm.value);
+            };
         }
 
-        function onNumberButtonClick() {
+        function onappendingButtonClick() {
             inputForm.value += this.innerText;
-        }
-
-        function onBackButtonClick() {
-            var str = inputForm.value;
-            inputForm.value = str.substr(0, str.length - 1);
         }
 
         function onClearButtonClick() {
             inputForm.value = "";
-        }
-
-        function onCalculationButtonClick() {
-            inputForm.value = eval(inputForm.value);
         }
     </script>
 </body>
