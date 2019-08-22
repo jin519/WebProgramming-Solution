@@ -1,6 +1,7 @@
 # Web-Programming-Solution
 <b>명품 HTML5 + CSS3 + Javascript 웹 프로그래밍</b> 책의 예제들에 대한 솔루션입니다.<br>
-<img src="book.png" width="30%" height="30%">
+
+<kbd><img src="book.png" height="350"></kbd>
 
 <a href="https://github.com/jin519/WebProgramming-Solution/tree/master/ch01">chapter 01 - 웹 프로그래밍과 HTML5 개요</a><br>
 <a href="https://github.com/jin519/WebProgramming-Solution/tree/master/ch02">chapter 02 - HTML5 기본 문서 만들기</a><br>
